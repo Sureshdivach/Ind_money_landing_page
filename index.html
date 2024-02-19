@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>practice 1</title>
+    <style>
+        *body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Write all necessery css here only  */
+
+        .main_container {
+            /* border: 1px solid red; */
+            margin: 0px;
+            background-color: rgb(226, 227, 231);
+            padding-bottom: 60px;
+        }
+
+        .nav {
+            /* border: 1px solid gray;  */
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 0 5px 5px rgba(102, 118, 172, 0.555);
+            border-radius: 5px;
+            position: sticky;
+            top: 0px;
+            background-color: rgb(255, 255, 255);
+
+        }
+
+        .logo {
+            width: 9%;
+            /* height: 50px; */
+            /* border: 1px solid gray;                */
+        }
+
+        .options {
+            /* border: 1px solid blue; */
+            width: 60%;
+            /* margin-right: 200px; */
+
+        }
+
+        .options ul {
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 5px;
+
+
+        }
+
+        .options ul li {
+            text-decoration-style: none;
+            list-style: none;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        .menu_icon {
+            /* border: 1px solid red; */
+            width: 5%;
+            text-align: center;
+            margin: auto;
+            display: none;
+            color: blue;
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        .options a:hover {
+            color: red;
+            cursor: pointer;
+        }
+
+        .container {
+            /* border: 1px solid gray; */
+            padding-top: 50px;
+        }
+
+        .top {
+            /* border: 1px solid sandybrown; */
+            width: 95%;
+            margin: auto;
+            text-align: center;
+            padding: 90px 0px 90px 0px;
+            border-radius: 3px;
+         
+            box-shadow: -2px 153px 207px 39px rgb(5, 5, 5) inset,
+                99px 255px 255px 255px rgb(0, 0, 204) inset;
+
+        }
+
+        .top h1,
+        h3 {
+            font-weight: bold;
+            color: white;
+        }
+
+        .top button {
+            padding: 10px 40px 10px 40px;
+            color: white;
+            background-color: rgb(3, 182, 253);
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .top button:hover {
+            background-color: rgb(255, 0, 0);
+            cursor: pointer;
+        }
+
+        .mid {
+            /* border: 1px solid gray; */
+            width: 95%;
+            margin: auto;
+        }
+
+        .mid-elements {
+            /* border: 1px solid gray; */
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 10px;
+            margin: 5px;
+            /* padding-bottom: 10px; */
+        }
+
+        .mid_div {
+            /* border: 1px solid gray; */
+            text-align: center;
+            border-radius: 10px;
+            font-weight: bold;
+            background-color: rgb(255, 255, 255);
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            /* padding-bottom: 10px;      */
+        }
+
+        .mid_div a {
+            color: blue;
+        }
+
+        .mid_div a:hover {
+            color: red;
+            cursor: pointer;
+        }
+
+        .mid_div img {
+            width: 20%;
+            border-radius: 40px;
+            background-color: rgb(255, 255, 255);
+            margin-top: 10px;
+        }
+
+        .bottom {
+            /* border: 1px solid gray; */
+            width: 95%;
+            margin: auto;
+            /* padding: 25px; */
+
+
+        }
+
+        .bottom1 {
+            /* border: 1px solid gray; */
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .bottom1 img {
+            width: 15%;
+        }
+
+        .bottom1 div {
+            /* border: 1px solid gray; */
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            /* box-shadow: 0 0 5px 5px rgba(102, 118, 172, 0.555); */
+        }
+
+        .bottom2 {
+            /* border: 1px solid gray; */
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .bottom2 img {
+            width: 20%;
+        }
+
+        .bottom2 div {
+            /* border: 1px solid gray; */
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            /* box-shadow: 0 0 5px 5px rgba(102, 118, 172, 0.555); */
+        }
+.logo_fixed{
+    /* border: 1px solid ; */
+    width: 90%;
+    position: fixed;
+    z-index: 5;   
+   bottom: 50px;
+    right: 30px;
+ text-align: end;
+ transform: scaley(1.2);
+
+
+}
+.logo_fixed img{
+    width: 5%;
+    border-radius: 30px
+    
+}
+
+
+        @media screen and (min-width:100px) and (max-width:450px) {
+            .main_container {
+                background-color: rgb(255, 255, 255);
+                margin: 0;
+                padding: 0;
+
+
+            }
+
+            .nav {
+                justify-content: space-evenly;
+                width: 100%;
+                box-shadow: 0 0 5px 5px rgba(102, 118, 172, 0.555);
+
+            }
+
+
+            .options {
+                width: 0%;
+                display: none;
+            }
+
+            .logo {
+                width: 40%;
+                /* height: 50px; */
+                /* border: 1px solid gray;                */
+            }
+
+            .menu_icon {
+                /* border: 1px solid red; */
+                width: 50%;
+                text-align: right;
+                margin: auto;
+                display: block;
+                color: blue;
+                font-size: x-large;
+                font-weight: bold;
+            }
+
+            .menu_icon:hover {
+                /* border: 1px solid red; */
+
+                color: rgb(255, 0, 64);
+                cursor: pointer;
+            }
+
+            .container {
+                /* border: 1px solid gray; */
+                padding-top: 10px;
+            }
+
+            .top {
+                /* border: 1px solid sandybrown; */
+                width: 100%;
+                margin: auto;
+                text-align: center;
+                font-size: x-small;
+                padding: 50px 0px 50px 0px;
+                border-radius: 5px;
+                box-shadow: -2px 153px 207px 39px rgb(5, 5, 5) inset,
+                    99px 255px 255px 255px rgb(0, 0, 204) inset;
+
+            }
+
+            .mid {
+                /* border: 1px solid gray; */
+                width: 100%;
+            }
+
+            .mid-elements {
+                /* border: 1px solid gray; */
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 0px;
+
+                padding-bottom: 0px;
+            }
+
+            .mid_div {
+                /* border: 1px solid gray; */
+                width: 100%;
+                text-align: center;
+                border-radius: 10px;
+                font-weight: bold;
+                background-color: rgb(255, 255, 255);
+                /* box-shadow: 0 0 5px 5px rgba(102, 118, 172, 0.555); */
+                margin: 10px 0px 10px 0px;
+                padding: 0;
+
+            }
+
+            .mid_div a {
+                color: rgb(11, 76, 255);
+            }
+
+            .bottom {
+                /* border: 1px solid gray; */
+                width: 100%;
+                margin: auto;
+                padding: 0px;
+            }
+
+            .bottom h1 {
+                font-size: x-large;
+                /* color: rgb(0, 64, 241); */
+                margin-bottom: 0px;
+            }
+
+            .bottom h2 {
+                font-size: x-large;
+                color: rgb(58, 87, 253);
+            }
+
+            .bottom1 {
+                /* border: 1px solid gray; */
+                margin: auto;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 20px;
+            }
+
+            .bottom1 img {
+                width: 15%;
+            }
+
+            .bottom1 div {
+                /* border: 1px solid gray; */
+                background-color: rgb(255, 255, 255);
+                text-align: center;
+                padding: 10px;
+                border-radius: 10px;
+                /* box-shadow: 0 0 5px 5px rgba(102, 118, 172, 0.555); */
+
+            }
+
+            .bottom2 {
+                /* border: 1px solid gray; */
+                margin: auto;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 20px;
+            }
+
+            .bottom2 img {
+                width: 20%;
+            }
+
+            .bottom2 div {
+                /* border: 1px solid gray; */
+                background-color: rgb(255, 255, 255);
+                text-align: center;
+                padding: 10px;
+                border-radius: 10px;
+                /* box-shadow: 0 0 5px 5px rgba(102, 118, 172, 0.555); */
+            }
+
+            .logo_fixed{
+    /* border: 1px solid ; */
+    width: 90%;
+    position: fixed;
+    z-index: 5;   
+   bottom: 20px;
+    right: 10px;
+ text-align: end;
+ 
+
+
+}
+.logo_fixed img{
+    width: 15%;
+    border-radius: 10px;
+
+        }
+    }
+        @media screen and (min-width:451px) and (max-width:920px) {
+            .main_container {
+                background-color: rgb(255, 255, 255);
+                margin: 0;
+                padding: 0;
+
+
+            }
+
+            .nav {
+                justify-content: space-between;
+                width: 100%;
+                box-shadow: 0 0 5px 5px rgba(102, 118, 172, 0.555);
+            }
+
+            .options {
+                width: 0%;
+                display: none;
+            }
+
+            .logo {
+                width: 40%;
+                border-radius: 10px;
+                /* height: 50px; */
+                /* border: 1px solid gray;                */
+            }
+
+            .menu_icon {
+                /* border: 1px solid red; */
+                width: 50%;
+                text-align: right;
+                margin: auto;
+                display: block;
+                color: blue;
+                font-size: xx-large;
+                font-weight: bold;
+            }
+
+            .menu_icon:hover {
+                /* border: 1px solid red; */
+
+                color: rgb(255, 0, 64);
+                cursor: pointer;
+            }
+
+            .container {
+                /* border: 1px solid gray; */
+                padding-top: 10px;
+            }
+
+            .top {
+                /* border: 1px solid sandybrown; */
+                width: 100%;
+                margin: auto;
+                text-align: center;
+                padding: 60px 0px 60px 0px;
+                border-radius: 5px;
+                box-shadow: -2px 153px 207px 39px rgb(5, 5, 5) inset,
+                    99px 255px 255px 255px rgb(0, 0, 204) inset;
+
+            }
+
+            .mid {
+                /* border: 1px solid gray; */
+                width: 100%;
+            }
+
+            .mid-elements {
+                /* border: 1px solid gray; */
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+
+            }
+
+            .mid_div {
+                /* border: 1px solid gray; */
+                width: 100%;
+                text-align: center;
+                border-radius: 10px;
+                font-weight: bold;
+                background-color: rgb(255, 255, 255);
+                /* box-shadow: 0 0 5px 5px rgba(102, 118, 172, 0.555); */
+                /* padding: 0; */
+
+            }
+
+            .mid_div a {
+                color: rgb(11, 76, 255);
+            }
+
+            .bottom {
+                /* border: 1px solid gray; */
+                width: 100%;
+                margin: auto;
+                padding: 0px;
+            }
+
+            .bottom h1 {
+                /* font-size: x-large; */
+                /* color: rgb(0, 64, 241); */
+                margin-bottom: 0px;
+            }
+
+            .bottom h2 {
+                font-size: x-large;
+                color: rgb(58, 87, 253);
+            }
+
+            .bottom1 {
+                /* border: 1px solid gray; */
+                margin: auto;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 20px;
+            }
+
+            .bottom1 img {
+                width: 20%;
+            }
+
+            .bottom1 div {
+                /* border: 1px solid gray; */
+                background-color: rgb(255, 255, 255);
+                text-align: center;
+                padding: 20px;
+                border-radius: 10px;
+                /* box-shadow: 0 0 5px 5px rgba(102, 118, 172, 0.555); */
+
+            }
+
+            .bottom2 {
+                /* border: 1px solid gray; */
+                margin: auto;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 20px;
+            }
+
+            .bottom2 img {
+                width: 20%;
+            }
+
+            .bottom2 div {
+                /* border: 1px solid gray; */
+                background-color: rgb(255, 255, 255);
+                text-align: center;
+                padding: 20px;
+                border-radius: 10px;
+                /* box-shadow: 0 0 5px 5px rgba(102, 118, 172, 0.555); */
+            }
+            .logo_fixed{
+    /* border: 1px solid ; */
+    width: 90%;
+    position: fixed;
+    z-index: 5;   
+   bottom: 20px;
+    right: 10px;
+ text-align: end;
+ 
+
+
+}
+.logo_fixed img{
+    width: 10%;
+    border-radius: 10px;
+
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_container">
+        <!-- This is the Navbar  -->
+        <div class="nav">
+            <img class="logo" src="./images/indmonery.png" alt="" />
+
+            <div class="options"><!-- Different Options Should Go Here  -->
+                <ul>
+                    <li><a href="https://www.indmoney.com/learn">Explore</a></li>
+                    <li><a href="https://www.indmoney.com/features">Features</a></li>
+                    <li><a href="https://www.indmoney.com/pricing?type=indian-stocks">Pricing</a></li>
+                    <li><a href="https://www.indmoney.com/articles">Blog</a></li>
+                    <li><a href="https://www.indmoney.com/customer-service">Customer Service</a></li>
+                    <li><a href="https://www.indmoney.com/login?return_to=/">Login</a></li>
+                </ul>
+            </div>
+            <div class="menu_icon">
+                <span>&#9776;</span>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="top">
+                <!-- Create the Top Part Using This  -->
+                <h1>Get Free US Stocks Worth Upto $1000*</h1>
+                <h3>on your first US Stock Funding</h3>
+                <button>Claim</button>
+            </div>
+            <!-- ************* Mid Section Start*********************** -->
+            <div class="mid">
+                <h2>Invest in top tech stocks</h2>
+
+                <div class="mid-elements">
+                    <div class="mid_div"><img src="./images/apple-logo-png.png" alt="" ><a 
+                            href="https://www.google.com/search?q=apple+inc+stock+price+history&oq=apple+inc.+sto&gs_lcrp=EgZjaHJvbWUqCAgFEAAYFhgeMgcIABAAGIAEMgcIARAAGIAEMgYIAhBFGDkyBwgDEAAYgAQyBwgEEAAYgAQyCAgFEAAYFhgeMggIBhAAGBYYHjIICAcQABgWGB4yCAgIEAAYFhgeMggICRAAGBYYHtIBCjE3NDM1ajBqMTWoAgCwAgA&sourceid=chrome&ie=UTF-8&si=AKbGX_rx0kjCnU6rUbvmlCcr37ERUA8bDZMcv35Nhne_AMXMv9HBrnOyBf7DdhuhevePK8sIU2KBhs2-X59eLHTPXj4pd7q9V37QG07zLRz4Efn5Ep9xf6E%3D&ictx=1&ved=2ahUKEwj8mfGq3p2EAxVj8DgGHfEGDbsQyNoBKAB6BAgSEAA" target="_blank" >
+                            <p>Apple Inc.<br><br>$164.5</p>
+                        </a></div>
+                    <div class="mid_div"><img src="./images/microsoft.png" alt=""><a
+                            href="https://www.google.com/search?q=microsoft+stock+price&oq=microsoft+&gs_lcrp=EgZjaHJvbWUqEggCEAAYQxiDARixAxiABBiKBTIGCAAQRRg5MhIIARAAGEMYgwEYsQMYgAQYigUyEggCEAAYQxiDARixAxiABBiKBTIMCAMQABhDGIAEGIoFMg0IBBAAGIMBGLEDGIAEMhIIBRAAGEMYgwEYsQMYgAQYigUyDAgGEAAYQxiABBiKBTIMCAcQABhDGIAEGIoFMhMICBAuGIMBGMcBGLEDGNEDGIAEMgwICRAAGEMYgAQYigXSAQk4MzMwajBqMTWoAgCwAgA&sourceid=chrome&ie=UTF-8" target="_blank">
+                            <p>Microsoft<br><br>$164.5</p>
+                        </a>
+                    </div>
+                    <div class="mid_div"><img src="./images/googlelogo.png" alt=""><a
+                            href="https://www.google.com/search?q=google+stock+price&oq=goo&gs_lcrp=EgZjaHJvbWUqDAgCEAAYQxiABBiKBTIGCAAQRRg5MhgIARAuGEMYgwEYxwEYsQMY0QMYgAQYigUyDAgCEAAYQxiABBiKBTISCAMQABhDGIMBGLEDGIAEGIoFMg0IBBAAGIMBGLEDGIAEMgwIBRAAGEMYgAQYigUyEggGEAAYQxiDARixAxiABBiKBTINCAcQABiDARixAxiABDINCAgQABiDARixAxiABDIHCAkQABiPAtIBCTQ3NzFqMGoxNagCALACAA&sourceid=chrome&ie=UTF-8" target="_blank">
+                            <p>Google.<br><br>$164.5</p>
+                        </a>
+                    </div>
+                    <div class="mid_div"><img src="./images/download.png" alt=""><a
+                            href="https://www.google.com/search?q=tmsc+stock&oq=tmsc&gs_lcrp=EgZjaHJvbWUqDAgCEAAYQxiABBiKBTISCAAQABhDGOMCGLEDGIAEGIoFMhUIARAuGEMYxwEYsQMY0QMYgAQYigUyDAgCEAAYQxiABBiKBTIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIJCAcQABgKGIAEMgcICBAAGIAEMgcICRAAGIAE0gEJNzA1MGowajE1qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank">
+                            <p>Tiwan <br>Semiconductor<br><br>$164.5</p>
+                        </a>
+                    </div>
+                    <div class="mid_div"><img src="./images/nvidia-logo-png.jpg" alt=""><a
+                            href="https://www.google.com/search?q=nvidia+stock&sca_esv=c2f3d0b18548173b&ei=5OTFZamgOv6IjuMPt4Wg-AY&oq=n+stock&gs_lp=Egxnd3Mtd2l6LXNlcnAiB24gc3RvY2sqAggAMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB5InEJQ0gZY3yxwBHgBkAEAmAHYAaABxgmqAQUwLjEuNbgBA8gBAPgBAcICChAAGEcY1gQYsAPCAg0QABiABBiKBRhDGLADwgIREAAYgAQYigUYkQIYsQMYgwHCAgoQABiABBiKBRhDwgIOEC4YBxgeGMcBGNEDGArCAhAQABiABBiKBRhDGLEDGIMBwgILEAAYgAQYsQMYgwHCAggQABiABBixA8ICBRAAGIAE4gMEGAAgQYgGAZAGCg&sclient=gws-wiz-serp" target="_blank">
+                            <p>NVIDIA <br><br>$164.5</p>
+                        </a>
+                    </div>
+                    <div class="mid_div"><img src="./images/broadcomlogo.png" alt=""><a
+                            href="https://www.google.com/search?q=broadcom+stock&oq=broadcome+&gs_lcrp=EgZjaHJvbWUqDwgCEAAYChiDARixAxiABDIGCAAQRRg5Mg8IARAAGAoYgwEYsQMYgAQyDwgCEAAYChiDARixAxiABDIMCAMQABgKGLEDGIAEMhUIBBAuGAoYgwEYxwEYsQMY0QMYgAQyDwgFEAAYChiDARixAxiABDIJCAYQABgKGIAEMgwIBxAAGAoYsQMYgAQyCQgIEAAYChiABDIPCAkQABgKGIMBGLEDGIAE0gEJODU2MmowajE1qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank">
+                            <p>Broadcom Inc. <br><br>$164.5</p>
+                        </a>
+                    </div>
+                    <div class="mid_div"><img src="./images/johnson png img.png" alt=""><a
+                            href="https://www.google.com/search?q=johnson+and+johnson+stock&sca_esv=c2f3d0b18548173b&ei=mOXFZcODCPa94-EPpOG0uAg&oq=jo+stock&gs_lp=Egxnd3Mtd2l6LXNlcnAiCGpvIHN0b2NrKgIIADIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIKEAAYgAQYigUYQzIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHkiuNFCKB1i9GnABeAGQAQCYAdUBoAG5D6oBBTAuNS41uAEByAEA-AEBwgIKEAAYRxjWBBiwA8ICDRAAGIAEGIoFGEMYsAPCAg4QABjkAhjWBBiwA9gBAcICGRAuGIAEGIoFGEMYxwEY0QMYyAMYsAPYAQLCAhMQLhiABBiKBRhDGMgDGLAD2AECwgIQEAAYgAQYigUYQxixAxiDAcICCxAAGIAEGIoFGJEC4gMEGAAgQYgGAZAGEboGBggBEAEYCboGBggCEAEYCA&sclient=gws-wiz-serp" target="_blank">
+                            <p>Johnson & Johnson <br><br>$164.5</p>
+                        </a>
+                    </div>
+                    <div class="mid_div"><img src="./images/merck logo.png" alt=""><a
+                            href="https://www.google.com/search?q=merckco+stock&sca_esv=c2f3d0b18548173b&ei=ueXFZczMHPic4-EP1fuu4Ao&ved=0ahUKEwiMjcXk7p2EAxV4zjgGHdW9C6wQ4dUDCBA&uact=5&oq=merckco+stock&gs_lp=Egxnd3Mtd2l6LXNlcnAiDW1lcmNrY28gc3RvY2syBxAAGIAEGA0yBxAAGIAEGA0yBhAAGB4YDTIGEAAYHhgNMgYQABgeGA0yBhAAGB4YDTIGEAAYHhgNMgYQABgeGA0yBhAAGB4YDTIGEAAYHhgNSInlAlD5CFipsgJwBngBkAEBmAHtAaABoBqqAQYwLjMuMTO4AQPIAQD4AQHCAgoQABhHGNYEGLADwgINEAAYgAQYigUYQxiwA8ICBhAAGAcYHsICEBAAGIAEGIoFGEMYsQMYgwHCAgoQABiABBiKBRhDwgILEAAYgAQYsQMYgwHCAggQABgHGB4YCsICDRAAGIAEGA0YsQMYgwHCAgoQABiABBgNGLED4gMEGAAgQYgGAZAGCg&sclient=gws-wiz-serp" target="_blank">
+                            <p>Merckco Inc. <br><br>$164.5</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ************* Mid Section End*********************** -->
+
+            <div class="bottom">
+                <h1>Charges outside of INDmoney</h1><br>
+                <h2> Us Stocks</h2>
+                <div class="bottom1">
+                    <div> <img src="./images/parnstage png.png" alt="">
+                        <h4>Taxation</h4>
+                        <p>less than 24 months:STCG; income tex slab rate(+ surcharge and cess) More then 24
+                            months:LTCG@20%</p>
+                    </div>
+                    <div><br><img src="./images/png-transparentsaving.png" alt=""><br>
+                        <h4>Divident</h4>
+                        <p>Dividents are taxed at source at a rate of 25% . So the money you receive in your US Stock
+                            account as a result of dividents payment will be post deduction of tax. You can however
+                            offset this tax deducted in yearly income tax filling in India and get a full credit of the
+                            same.</p>
+                    </div>
+                    <div><br> <br><img src="./images/tax.png" alt=""><br><br>
+                        <h4>TCS</h4>
+                        <p> Above RS7 lakh:5%TCS(Can claim tax credit at while filling)</p>
+                    </div>
+                </div>
+                <h2>Mutual Fund</h2>
+                <div class="bottom2">
+                    <div><br> <img
+                            src="./images/png-transparent-bar-chart-graph-of-a-function-graph-going-up-text-logo-graph-of-a-function-thumbnail.png"
+                            alt=""><br>
+                        <h4>Expense Ration</h4>
+                        <p>The AMC charges the fund management fees+ distribution(commission) fee to manage a mutual
+                            fund. INDmoney works with Direct Plans of mutual funds only. Direct plans of mutual funds
+                            have 0 distribution(commission),in turn minnimizing the expense ratio. The applicable GST is
+                            also included in the expense ratio.</p>
+                    </div>
+                    <div> <img src="./images/-stamps.png" alt="">
+                        <h4>STT(Stamp Duty)</h4>
+                        <p>STT is a tax paid on purchase or sale of securities. When it comes to mutual funds,only
+                            equity oriented funds attract an STT payment.If you've invested in a debt oriented fund,then
+                            no STT applicable on it. STT of 0.025% of sold amount is payable when you sell units of
+                            equity mutual funds.STT is not applicable at the time of purchase of equity mutual funds.
+                        </p>
+                    </div>
+                    <div> <img src="./images/exit-exit-door.png" alt="">
+                        <h4>Exit Loads</h4>
+                        <p>Exit load is a fee charged by the mutual fund houses if investors sell units within a certain
+                            period from the date of investment.Some funds don't charge exit load. Typically,equity
+                            mutual fund schemes levy an exit load of 1% if the units are sold within one year of buying.
+                            Debt funds, also levy an exit load,but the period could be as low as a day or a month since
+                            the overall tenure of the fund could be only be only a few weeks or months.Liquid funds do
+                            not charge any exit load.</p>
+                    </div>
+                </div>
+
+                <!-- Create the Bottom Part Here  -->
+            </div>
+        </div>
+<div class="logo_fixed"><a href="https://whatsapp.com/dl/" target="_blank">
+    <img src="./images/whatsapp-logo.png" alt="" ></a>
+      
+</div>
+
+    </div>
+</body>
+
+</html>
